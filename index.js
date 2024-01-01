@@ -22,7 +22,7 @@ app.post("/webhook", async (req, res) => {
   if (req.body.events[0].type === "message") {
     // ============== parameter ===================
     const time = "7 day until...";
-    const name = "Sally";
+    const name = "ไม้แก่น";
     const Birthday = "15 December 2023";
     const profileUrl =
       "https://render.fineartamerica.com/images/rendered/default/poster/7/8/break/images/artworkimages/medium/3/doremon-deepak-pengoria.jpg";
@@ -114,16 +114,34 @@ app.post("/webhook", async (req, res) => {
                           layout: "horizontal",
                           contents: [
                             {
-                              type: "text",
-                              text: name,
-                              weight: "bold",
+                              type: "box",
+                              layout: "vertical",
+                              contents: [
+                                {
+                                  type: "text",
+                                  text: "ไม้แก่น",
+                                  weight: "bold",
+                                  flex: 0,
+                                },
+                              ],
                               flex: 0,
-                              size: "16px",
+                              height: "22px",
+                              justifyContent: "flex-end",
                             },
                             {
-                              type: "text",
-                              text: "'s Birthday",
-                              size: "16px",
+                              type: "box",
+                              layout: "vertical",
+                              contents: [
+                                {
+                                  type: "text",
+                                  text: "'s Birthday",
+                                  position: "relative",
+                                  flex: 0,
+                                },
+                              ],
+                              height: "22px",
+                              justifyContent: "flex-end",
+                              flex: 0,
                             },
                           ],
                         },
